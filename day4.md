@@ -28,3 +28,10 @@ sonar-scanner \
 ~~~
 
 Practice: exercise software security review on artificial cases (see handouts). Perform exercises in teams of 4 to 6 people. Review the results afterwards with on-screen demonstration.
+
+Handouts:
+- [Sample 1](samples/sample1.php)
+- [Sample 2](samples/sample2.php)
+- [Sample 3](samples/sample3.php)
+- [Sample 4](samples/sample4.php)
+- [Sample 5](samples/sample5.php)

@@ -1,7 +1,9 @@
 # Application Security Awareness Training
 
 Duration: 4 days
+
 Workload: 3 hours per day
+
 Audience: 
 - Software Developers
 - Software Testers
@@ -9,6 +11,9 @@ Audience:
 - Business Analysts
 - Project Managers
 - Security Professionals
+
+Requirements:
+- Basic knowledge of PHP syntax
 
 ## Work Plan
 - [Day1 - Introduction to Application Security](day1.md)
