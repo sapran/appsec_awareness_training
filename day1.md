@@ -7,7 +7,7 @@ Massive data breaches
 Personal data and password breaches
 - https://haveibeenpwned.com
 - https://haveibeenpwned.com/Passwords
-- Threat analysis sneak peek: API and k-anonymity
+- Threat analysis sneak peek: [API and k-anonymity](https://www.troyhunt.com/ive-just-launched-pwned-passwords-version-2/#cloudflareprivacyandkanonymity)
 
 Software vulnerabilities
 - https://nvd.nist.gov
@@ -22,6 +22,7 @@ Software vulnerabilities
 
 ### Practice: demonstrate attack narratives that use typical vulnerabilities in web-applications
 
-- Burp Suite
-- https://hack.me/103107/easiest-xss.html
-- https://xsshunter.com/app
+- [Burp Suite](https://portswigger.net/burp/)
+- [Hack Me](https://hack.me/103107/easiest-xss.html)
+- [DVWA](http://www.dvwa.co.uk)
+- [XSS Hunter](https://xsshunter.com/app)
