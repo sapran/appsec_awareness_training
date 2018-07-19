@@ -1,6 +1,4 @@
-### Review OWASP Top 10 appsec risks
-- https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project
-- https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf
+## Theory: fundamental security principles
 
 ### Security Maxims overview
 - https://www.techrepublic.com/blog/it-security/it-security-maxims-for-the-ages/
@@ -29,4 +27,15 @@ Garry McGraws' 10 software security principles
 - ZAP: https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
 - SonarQube: https://www.sonarqube.org
 
-Practice (preparation for day 3): demonstrate the workflow of security penetration testing – discover, verify, and remediate a vulnerability.
+## Practice: security penetration testing fundamentals
+
+### Deep dive into HTTP/HTML/JS/XSS
+- Demo and overbiew of Burp Suite CE.
+- Walk thorugh the Reflected and Stored XSS, detection and mitigation techniques.
+
+### SQLi overview
+- Web-applications and databases.
+- Types of SQLi, detection and expoitation tools.
+
+### Security penetration testing workflow
+- Discovery, reporting and remediation
