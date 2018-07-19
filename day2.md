@@ -29,6 +29,9 @@ Garry McGraws' 10 software security principles
 
 ## Practice: security penetration testing fundamentals
 
+SecLists
+- https://github.com/danielmiessler/SecLists
+
 ### Deep dive into HTTP/HTML/JS/XSS
 - Demo and overbiew of Burp Suite CE.
 - Walk thorugh the Reflected and Stored XSS, detection and mitigation techniques.
