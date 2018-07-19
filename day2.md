@@ -35,6 +35,7 @@ SecLists
 ### Deep dive into HTTP/HTML/JS/XSS
 - Demo and overbiew of Burp Suite CE.
 - Walk thorugh the Reflected and Stored XSS, detection and mitigation techniques.
+- XSS filters and evasion of thereof. https://wiremask.eu/articles/xss-filter-evasion-cheat-sheet/
 
 ### SQLi overview
 - Web-applications and databases.
