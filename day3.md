@@ -3,8 +3,8 @@
 
 ### Demonstrate penetration testing workflow
 OWASP DVWA
-- https://github.com/ethicalhack3r/DVWA 
-- Docker: dvwa:latest
+- [DVWA](http://www.dvwa.co.uk)
+- [DVWA in Docker](https://hub.docker.com/r/infoslack/dvwa/)
 
 Metasploitable3 + Metasploit Framework
 - https://github.com/rapid7/metasploitable3
@@ -16,3 +16,15 @@ Metasploitable3 + Metasploit Framework
 
 ### Demonstrate code review basic concepts
 - OWASP DVWA source code
+
+### Practice: SQLi vulnerabilities
+- Detection workflow
+- Introducing [CyberChef](https://gchq.github.io/CyberChef/)
+- SQLMap 
+-- brew install sqlmap
+-- apt install sqlmap
+-- http://sqlmap.org
+
+### SQLi filter evasion
+- [Evasion techniques](https://websec.wordpress.com/2010/12/04/sqli-filter-evasion-cheat-sheet-mysql/)
+- [Evading PHP mysql_real_escape_string()](https://stackoverflow.com/questions/5741187/sql-injection-that-gets-around-mysql-real-escape-string#12118602)
