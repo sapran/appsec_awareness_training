@@ -24,5 +24,5 @@ Software vulnerabilities
 
 - [Burp Suite](https://portswigger.net/burp/)
 - [Hack Me](https://hack.me/103107/easiest-xss.html)
-- [DVWA](http://www.dvwa.co.uk) [DVWA in Docker] (https://hub.docker.com/r/infoslack/dvwa/)
+- [DVWA](http://www.dvwa.co.uk) [DVWA in Docker](https://hub.docker.com/r/infoslack/dvwa/)
 - [XSS Hunter](https://xsshunter.com/app)
