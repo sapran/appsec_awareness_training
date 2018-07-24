@@ -21,9 +21,9 @@ Metasploitable3 + Metasploit Framework
 - Detection workflow
 - Introducing [CyberChef](https://gchq.github.io/CyberChef/)
 - SQLMap 
--- brew install sqlmap
--- apt install sqlmap
--- http://sqlmap.org
+  ``brew install sqlmap``
+  ``apt install sqlmap``
+  http://sqlmap.org
 
 ### SQLi filter evasion
 - [Evasion techniques](https://websec.wordpress.com/2010/12/04/sqli-filter-evasion-cheat-sheet-mysql/)
