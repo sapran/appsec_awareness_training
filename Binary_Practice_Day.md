@@ -1,3 +1,11 @@
+0. Disable ASLR in Metasploitable
+
+```
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"MoveImages"=dword:00000000
+```
+Then reboot
+
 1. Install Immunity Debugger
 - Download https://debugger.immunityinc.com/ID_register.py
 - Install on Metaspoitable
