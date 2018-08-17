@@ -18,6 +18,8 @@ Audience:
 
 Requirements:
 - Basic knowledge of PHP syntax
+- Basic knowledge of networks and protocols
+- Basic knowledge of computer architecture and Assembly
 
 ## Work Plan
 - [Day 1 - Introduction to Application Security](day1.md)
@@ -25,3 +27,4 @@ Requirements:
 - [Day 3 - Application Security Testing and Code Review Concepts](day3.md)
 - [Day 4 - Application Security Testing and Code Review Automation](day4.md)
 - [Day 5 - Introduction to Secure Development Life cycle and OWASP SAMM](day5.md)
+- [Day 6 - Introduction to Exploit Development](day6.md)
