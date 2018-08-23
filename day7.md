@@ -53,6 +53,10 @@ Access Inspeckage web interface
 Install InsecureBankv2
 - InsecureBankv2 Readme https://github.com/dineshshetty/Android-InsecureBankv2
 
+Run the web-service app
+
+Review the walkthroughs	
+
 Install tools
 - dex2jar https://github.com/pxb1988/dex2jar
 - apktool https://ibotpeaches.github.io/Apktool/
