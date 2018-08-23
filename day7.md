@@ -50,4 +50,12 @@ Access Inspeckage web interface
 
 ## Test vulnerable apps
 
+Install InsecureBankv2
 - InsecureBankv2 Readme https://github.com/dineshshetty/Android-InsecureBankv2
+
+Install tools
+- dex2jar https://github.com/pxb1988/dex2jar
+- apktool https://ibotpeaches.github.io/Apktool/
+- jd-gui https://github.com/java-decompiler/jd-gui
+- Luyten https://github.com/deathmarine/Luyten
+- jadx https://github.com/skylot/jadx
