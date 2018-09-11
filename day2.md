@@ -1,9 +1,9 @@
-## Theory: fundamental security principles
+# Theory: fundamental security principles
 
-### Security Maxims overview
+Security Maxims overview
 - https://www.techrepublic.com/blog/it-security/it-security-maxims-for-the-ages/
 
-### Security Engineering principles overview.
+Security Engineering principles overview.
 - Least Privilege
 - Fail-Safe Defaults
 - Economy of Mechanism
@@ -21,25 +21,25 @@ Ross Anderson's Security Engineering book
 Garry McGraws' 10 software security principles
 - http://www.zdnet.com/article/gary-mcgraw-10-steps-to-secure-software/
 
-### Walk through the flagship OWASP projects
+Walk through the flagship OWASP projects
 - ASVS: https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project
 - Testing Guide: https://www.owasp.org/index.php/OWASP_Testing_Project
 - ZAP: https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
 - SonarQube: https://www.sonarqube.org
 
-## Practice: security penetration testing fundamentals
+# Practice: application security testing fundamentals
 
 SecLists
 - https://github.com/danielmiessler/SecLists
 
-### Deep dive into HTTP/HTML/JS/XSS
+Deep dive into HTTP/HTML/JS/XSS
 - Demo and overbiew of Burp Suite CE.
 - Walk thorugh the Reflected and Stored XSS, detection and mitigation techniques.
 - XSS filters and evasion of thereof. https://wiremask.eu/articles/xss-filter-evasion-cheat-sheet/
 
-### SQLi overview
+SQLi overview
 - Web-applications and databases.
 - Types of SQLi, detection and expoitation tools.
 
-### Security penetration testing workflow
+Security penetration testing workflow
 - Discovery, reporting and remediation
