@@ -28,3 +28,4 @@ Requirements:
 - [Day 4 - Application Security Testing and Code Review Automation](day4.md)
 - [Day 5 - Introduction to Secure Development Life cycle and OWASP SAMM](day5.md)
 - [Day 6 - Introduction to Exploit Development](day6.md)
+- [Day 7 - Introduction to Mobile Security Testing](day7.md)
