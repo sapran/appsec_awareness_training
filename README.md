@@ -23,9 +23,14 @@ Requirements:
 
 ## Work Plan
 - [Day 1 - Introduction to Application Security](day1.md)
-- [Day 2 - Application Security Fundamentals and OWASP Projects](day2.md)
-- [Day 3 - Application Security Testing and Code Review Concepts](day3.md)
-- [Day 4 - Application Security Testing and Code Review Automation](day4.md)
-- [Day 5 - Introduction to Secure Development Life cycle and OWASP SAMM](day5.md)
-- [Day 6 - Introduction to Exploit Development](day6.md)
-- [Day 7 - Introduction to Mobile Security Testing](day7.md)
+- [Day 2 - Application Security Fundamentals](day2.md)
+- [Day 3 - Application Security Penetration Testing](day3.md)
+- [Day 4 - Application Security Code Review](day4.md)
+- [Day 5 - Software Development Life Cycle](day5.md)
+- [Day 6 - Exploit Development](day6.md)
+- [Day 7 - Mobile Security Testing](day7.md)
+
+## TODO
+- Crypto (as in Cryptography)
+- DevOps
+- Smart Contracts
