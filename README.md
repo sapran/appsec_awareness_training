@@ -6,7 +6,7 @@
 This training is prepared, maintained and conducted on-site by [Berezha Security](https://berezhasecurity.com) to help development teams achieve baseline level of application security awareness before implementing Secure Development practices based on OWASP SAMM framework.
 
 ## Training parameters
-Duration & workload: 5 days, 3 hours per day
+Duration & workload: 7 days, 2-3 hours per day
 
 Audience: 
 - Software Developers
