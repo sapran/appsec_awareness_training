@@ -30,6 +30,7 @@ Requirements:
 - [Day 5 - Software Development Life Cycle](day5.md)
 - [Day 6 - Exploit Development](day6.md)
 - [Day 7 - Mobile Security Testing](day7.md)
+[References](references.md)
 
 ## TODO
 - Crypto (as in Cryptography)
