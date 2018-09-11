@@ -1,3 +1,5 @@
+# Software Code Secuirty Review
+
 Review OWASP [Application Security Verification Standard](https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project) as a methodology basis for security code review.
 
 Install [SonarQube](https://www.sonarqube.org/#downloads) or register for SonarCloud.io.
@@ -27,7 +29,9 @@ sonar-scanner \
   -Dsonar.login=<API_KEY>
 ~~~
 
-Practice: exercise software security review on artificial cases (see handouts). Perform exercises in teams of 4 to 6 people. Review the results afterwards with on-screen demonstration.
+Practice: exercise software security review on artificial cases (see handouts)
+
+Perform exercises in teams of 4 to 6 people. Review the results afterwards with on-screen demonstration.
 
 Handouts:
 - [Sample 1](samples/sample1.php)
