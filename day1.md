@@ -1,4 +1,4 @@
-# Establish context: demonstrate current state of applicaiton security and its effect on technology and economy.
+# Establish context: demonstrate current state of applicaiton security and its effect on technology and economy
 
 Massive data breaches
 - http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/
