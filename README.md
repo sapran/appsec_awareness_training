@@ -17,6 +17,7 @@ Audience:
 - Security Professionals
 
 Requirements:
+- Basic knowledge of Linux OS
 - Basic knowledge of PHP syntax
 - Basic knowledge of networks and protocols
 - Basic knowledge of computer architecture and Assembly
