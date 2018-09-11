@@ -57,7 +57,7 @@ Run the web-service app
 
 Review the walkthroughs	
 
-Install tools
+Install and use the tools
 - dex2jar https://github.com/pxb1988/dex2jar
 - apktool https://ibotpeaches.github.io/Apktool/
 - jd-gui https://github.com/java-decompiler/jd-gui
