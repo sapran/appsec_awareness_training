@@ -2,8 +2,10 @@
 
 ## Future development
 This training program has evolved into a comprehensive application security training for developer teams provided by [Berezha Security](https://berezhasecurity.com).
-The training description: https://berezhasecurity.com/developer-training/
-The training notes are kept up to date here: https://github.com/BerezhaSecurity/appsec_awareness_training
+
+The training description: https://berezhasecurity.com/developer-training/.
+
+The training notes are kept up to date here: https://github.com/BerezhaSecurity/appsec_awareness_training.
 
 ## Rationale 
 [OWASP SAMM](http://www.opensamm.org) mandates an Application Security Awareness Training to be conducted for development teams within the [Education & Guidance Practice 1, Activity A](https://www.owasp.org/index.php/SAMM_-_Education_%26_Guidance_-_1).
